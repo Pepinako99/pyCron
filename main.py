@@ -7,7 +7,8 @@ cron = CronTab(user=True)
 job = cron.new(command='export DISPLAY=0 && export XDG_RUNTIME_DIR=/rum/user/1000 && dunstify -u citical --icon="info" --appname="Nombre del proceso" "Titulo" "Mensaje"')
 
 # Configurar para que se ejecute cada minuto
-job.minute.on(46)
+job.minute.on(50)
+
 job.hour.on(18)
 job.day.on(19)
 job.month.on(2)
