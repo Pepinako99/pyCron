@@ -7,7 +7,10 @@ cron = CronTab(user=True)
 job = cron.new(command='mkdir -p $HOME/microntab')
 
 # Configurar para que se ejecute cada minuto
-job.minute.every(1)
+job.minute.on(38)
+job.hour.on(18)
+job.day.on(19)
+job.month.on(2)
 
 # Guardar cambios
 cron.write()
