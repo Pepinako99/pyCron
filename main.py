@@ -4,10 +4,10 @@ from crontab import CronTab
 cron = CronTab(user=True)
 
 # Crear nueva tarea
-job = cron.new(command='mkdir -p $HOME/microntab')
+job = cron.new(command='export DISPLAY=0 && export XDG_RUNTIME_DIR=/rum/user/1000 && dunstify -u citical --icon="info" --appname="Nombre del proceso" "Titulo" "Mensaje"')
 
 # Configurar para que se ejecute cada minuto
-job.minute.on(38)
+job.minute.on(46)
 job.hour.on(18)
 job.day.on(19)
 job.month.on(2)
